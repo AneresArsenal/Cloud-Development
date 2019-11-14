@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+<head>
+  <title>CS493 Assignment 1 GAE</title>
+  <link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}"/>
+</head>
+<body>
+  <h2> <font color=#006699> CS493 Assignment 1 Google App Engine </font> </h2>
+  <form action="/text" method="post">
+    <font color=#0000ff>
+    Howdy! What is your name? :)<br>
+    <input type="text" name="text_input" value="">
+    <br>
+    <input type="submit" value="Submit">
+    </font>
+  </form>
+  <div id='foo'>
+<br>
+    {% for comment in comments %}
+    <div class="row">
+        <font color=#006600>
+        Hello {{ comment }} ! Nice to meet ya! 
+        </font>
+    </div>
+    {% endfor %}
+  
+  </div>
+<br>
+  <div> Reference Sources:
+        <font color= #0066cc>
+        <ul id='source'>
+            <li> https://teamtreehouse.com/community/print-hello-name
+            <li> https://aryaboudaie.com/python/technical/educational/web/flask/2018/10/17/flask.html#how-to-get-user-input        
+            <li> https://python-forum.io/Thread-Connecting-python-script-into-HTML-with-flask
+        </ul>
+        </font>
+  </div>
+
+</body>
+</html>

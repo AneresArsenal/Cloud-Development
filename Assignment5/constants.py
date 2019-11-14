@@ -1,2 +1,1 @@
 boats = "boats"
-slips = "slips"
