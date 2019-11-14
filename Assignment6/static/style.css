@@ -1,0 +1,71 @@
+
+h3 {
+    text-align:center;
+    font-family: Courier, monospace;
+    color: #006699;
+    font-size: 28px;
+    }
+
+h4 {
+    text-align:center;
+    font-family: Courier, monospace;
+    color: #1a8d4a;
+    font-size: 25px;
+    }
+
+div{
+    text-align:center;
+}
+
+div.typewriter {
+    color: #006699;
+    text-align:center;
+    size: 20px;
+}
+
+.button {
+    color: #19793e;
+    size: 30px;
+    font: 400 30px system-ui;
+    padding: 5px 35px 10px;
+    border-width: 5px;
+    text-align:center;
+}
+
+.typewriter {
+    font-family: Courier, monospace;
+    display: inline-block;
+    text-align:center;
+}
+
+.typewriter-text {
+    display: inline-block;
+    overflow: hidden;
+    letter-spacing: 2px;
+    animation: typing 5s steps(30, end), blink .75s step-end infinite;
+    white-space: nowrap;
+    text-align:center;
+    font-size: 2vw;
+    font-weight: 700;
+    border-right: 4px solid orange;
+    box-sizing: border-box;
+}
+
+@keyframes typing {
+    from {
+        width: 0%
+    }
+    to {
+        width: 100%
+    }
+}
+
+@keyframes blink {
+    from,
+    to {
+        border-color: transparent
+    }
+    50% {
+        border-color: orange;
+    }
+}
