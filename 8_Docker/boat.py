@@ -65,25 +65,25 @@ def boats_patch_put(id):
         else:
             boat["id"] = boat.key.id
             boat["self"] = str(request.base_url)
-            if 'application/json' in request.accept_mimetypes:
-                return (jsonify(boat), 200)
-            elif 'text/html' in request.accept_mimetypes:
-                # return (json.dumps(boat), 200)
-                return render_template_string('''
-    <table>
-            <tr>
-                <td> Attribute: Content </td>
-            </tr>
-    {% for key, value in labels.items() %}
-            <tr>
-                <td> {{ key }}: {{ value }} </td>
-            </tr>
-    {% endfor %}
-    </table>
-''', labels=boat)
-            else:
-                errObj = {"Error": "Invalid format requested"}
-                return (jsonify(errObj), 406)
+            # if 'application/json' in request.accept_mimetypes:
+            return (jsonify(boat), 200)
+#             elif 'text/html' in request.accept_mimetypes:
+#                 # return (json.dumps(boat), 200)
+#                 return render_template_string('''
+#     <table>
+#             <tr>
+#                 <td> Attribute: Content </td>
+#             </tr>
+#     {% for key, value in labels.items() %}
+#             <tr>
+#                 <td> {{ key }}: {{ value }} </td>
+#             </tr>
+#     {% endfor %}
+#     </table>
+# ''', labels=boat)
+#             else:
+#                 errObj = {"Error": "Invalid format requested"}
+#                 return (jsonify(errObj), 406)
 
     elif request.method == 'PATCH' or request.method == 'PUT':
         if not request.is_json:
